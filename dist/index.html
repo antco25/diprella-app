@@ -2,17 +2,21 @@
 <html>
 <head>
 <title>Page Title</title>
-<link rel="stylesheet" href="../src/styles.css">
 </head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<div id="root">
+    <h1>My First Heading</h1>
 
-<div id="slider">
-    When the slider reaches the middle position, the content is changed,
-    then the page is reloaded to the new page
+    <div id="slider">
+        <div id="slider-content">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start your journey with us</p>
+            <button id="slider-button">Sign Up</button>
+        </div>
+    </div>
 </div>
 
+<script src="./main.js"></script>
 </body>
 </html> 
