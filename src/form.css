@@ -1,0 +1,7 @@
+#form {
+    color: blue;
+    background-color: red;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

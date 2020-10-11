@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Raleway','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#root {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}

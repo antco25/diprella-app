@@ -1,4 +1,6 @@
-import './styles.css'
+import './index.css'
+import './slider.css'
+import './form.css'
 
 function hello() {
     let div = document.createElement("div")
@@ -9,11 +11,17 @@ function hello() {
 
 function onSliderClick() {
     let slider = document.getElementById('slider')
+    let sliderContent = document.getElementById('slider-content')
+    let sliderButtonContent = document.getElementById('slider-button-content')
 
     if (!slider.className || slider.className == 'ltr') {
         slider.className = 'rtl'
+        sliderContent.className = 'rtl-content'
+        sliderButtonContent.className = 'rtl-button-content'
     } else {
         slider.className = 'ltr'
+        sliderContent.className = 'ltr-content'
+        sliderButtonContent.className = 'ltr-button-content'
     }
 }
 
