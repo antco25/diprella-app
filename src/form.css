@@ -1,7 +1,203 @@
 #form {
-    color: blue;
-    background-color: red;
     display:flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+
+    padding-right: 36rem;
+}
+
+#form-content {
+    color: #28b498;
+    text-align: center;
+    width: 25rem;
+}
+
+#form-content #form-subtitle {
+    color:#848c8a;
+    font-size: 0.9rem;
+}
+
+#form-content #social-media {
+    margin-bottom: 2rem;
+}
+
+#form-content #social-media .fa {
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+}
+
+#form-content #social-media .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+#form-content #social-media .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+#form-content #social-media .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+/*************************************/
+
+#form-content #form-input {
+    margin-bottom: 1rem;
+    color:#88908e;
+}
+
+#form-content #form-input .input-container {
+    position: relative;
+}
+
+#form-content #form-input .fa {
+    position: absolute;
+    margin-top: 0.5rem;
+    top: 1rem;
+    left: 0.5rem;
+    width: 100%;
+    max-width: 20px;
+}
+
+#form-content #form-input form input[type=text], #form-content #form-input input[type=password] {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    border: 1px solid #eef5f3;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #eef5f3;
+    font-weight: bold;
+    font-size: .8rem;
+    color:#88908e;
+}
+
+#form-content #form-input form input[type=text]:focus, #form-content #form-input form input[type=password]:focus {
+    border: 1px solid #ccc;
+}
+
+#form-content #form-input form ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:#88908e;
+    opacity: 1; /* Firefox */
+  }
+  
+#form-content #form-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#88908e;
+}
+  
+#form-content #form-input::-ms-input-placeholder { /* Microsoft Edge */
+    color:#88908e;
+}
+
+#form-content #form-input .form-input-text {
+    color: black;
+    font-size: .9rem;
+    text-decoration: none; 
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+#form-content #form-input .form-input-text:hover {
+    text-decoration: underline;
+}
+
+/*************************************/
+
+#form-content #form-button {
+    background-color: #28b498;
+    border:2px solid #28b498;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    font-family : inherit;
+    font-size: 1rem;
+    border-radius: 5rem;
+    width: 65%;
+    cursor:pointer;
+}
+
+#form-content #form-button #form-button-content {
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: relative;
+}
+
+#form-content #form-button:hover {
+    background-color:#3cc6a5;
+    border:2px solid #3cc6a5;
+}
+
+@keyframes ltr-form {
+    0% {padding-right: 36rem;}
+    50%{padding-right: 0; padding-left: 0;}
+    100% {padding-right: 0; padding-left: 36rem;}
+  }
+
+@keyframes rtl-form {
+    0% {padding-right: 0; padding-left: 36rem;}
+    50%{padding-left: 0; padding-right: 0;}
+    100% {padding-right: 36rem;}
+  }
+
+.ltr-form {
+    animation: ltr-form 1s forwards ease-out;
+}
+
+.rtl-form {
+    animation: rtl-form 1s forwards ease-out;
+}
+
+/************************************
+***********MEDIA QUERIES*************
+*************************************/
+
+@media only screen and (max-width: 800px) {
+    #slider {
+        max-width: 17rem;
+    }
+
+    #form {
+        padding-right: 17rem;
+    }
+
+    @keyframes ltr-form {
+        0% {padding-right: 17rem;}
+        50%{padding-right: 0; padding-left: 0;}
+        100% {padding-right: 0; padding-left: 17rem;}
+      }
+    
+    @keyframes rtl-form {
+        0% {padding-right: 0; padding-left: 17rem;}
+        50%{padding-left: 0; padding-right: 0;}
+        100% {padding-right: 17rem;}
+      }
+}
+
+@media only screen and (max-width: 640px) {
+    #form {
+        padding: 0;
+        min-height: 640px;
+        min-width: 320px;
+    }
+
+    #form-content {
+        color: #28b498;
+        text-align: center;
+        width: 19rem;
+    }
+
+    .ltr-form, .rtl-form {
+        animation: unset;
+    }
 }

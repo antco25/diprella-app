@@ -3,21 +3,45 @@
 <head>
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Diprella Mock</title>
 </head>
 <body>
 
 <div id="root">
+
+    <div id="form">
+        <div id="form-content">
+            <h1 id="form-title">Sign in to Your Account</h1>
+            <div id="social-media">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+            <p id="form-subtitle">or use your email account:</p>
+            <div id="form-input">
+                <form>
+                    <div class="input-container">
+                        <i class="fa fa-envelope icon"></i>
+                        <input type="text" name="email" placeholder="Email">
+                    </div>
+                    <div class="input-container">
+                        <i class="fa fa-lock icon"></i>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                </form>
+                  <a href="#" class="form-input-text">Forgot your password?</a>
+            </div>
+            <button id="form-button" type="submit"><p id="form-button-content">Sign In</p></button>
+        </div>
+    </div>
+
     <div id="slider">
         <div id="slider-content">
             <h1>Hello, Friend!</h1>
             <p>Enter your personal details and start your journey with us</p>
         </div>
         <button id="slider-button"><p id="slider-button-content">Sign Up</p></button>
-    </div>
-
-    <div id="form">
-        <h1>My First Heading</h1>
     </div>
 </div>
 

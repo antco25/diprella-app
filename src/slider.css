@@ -27,7 +27,7 @@
 }
 
 #slider #slider-content p {
-    max-width: 15rem;
+    max-width: 16rem;
     margin: auto;
     padding-bottom: 1.5rem;
 }
@@ -42,6 +42,11 @@
     font-size: 1rem;
     border-radius: 5rem;
     width: 40%;
+    cursor:pointer;
+}
+
+#slider .event-disabled {
+    pointer-events: none;
 }
 
 #slider #slider-button #slider-button-content {
@@ -55,24 +60,24 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-@keyframes ltr {
+@keyframes ltr-slider {
     0% {max-width: 36rem;right: calc(100% - 36rem);}
     50%{max-width: 66%;}
     100% { max-width: 36rem; right: 0;}
   }
 
-@keyframes rtl {
+@keyframes rtl-slider {
     0% {max-width: 36rem;left: calc(100% - 36rem);}
     50%{max-width: 66%;}
     100% { max-width: 36rem; left: 0;}
   }
 
-.ltr {
-    animation: ltr 1s forwards ease-out;
+.ltr-slider {
+    animation: ltr-slider 1s forwards ease-out;
 }
 
-.rtl {
-    animation: rtl 1s forwards ease-out;
+.rtl-slider {
+    animation: rtl-slider 1s forwards ease-out;
 }
 
 @keyframes rtl-content {
@@ -122,3 +127,43 @@
 #slider .ltr-button-content {
     animation: ltr-button-content 1s forwards ease-out;
 }
+
+/************************************
+***********MEDIA QUERIES*************
+*************************************/
+
+@media only screen and (max-width: 800px) {
+    #slider {
+        max-width: 17rem;
+    }
+
+    @keyframes ltr-slider {
+        0% {max-width: 17rem;right: calc(100% - 17rem);}
+        50%{max-width: 66%;}
+        100% { max-width: 17rem; right: 0;}
+      }
+    
+    @keyframes rtl-slider {
+        0% {max-width: 17rem;left: calc(100% - 17rem);}
+        50%{max-width: 66%;}
+        100% { max-width: 17rem; left: 0;}
+      }
+
+}
+
+@media only screen and (max-width: 640px) {
+    #slider {
+        position: static;
+        max-width: 100% !important;
+        min-width: 320px;
+        min-height: 640px;
+    }
+
+    .ltr-slider, .rtl-slider, #slider .rtl-content, #slider .ltr-content,
+    #slider .rtl-button-content,  #slider .ltr-button-content {
+        animation: unset;
+    }
+}
+
+
+

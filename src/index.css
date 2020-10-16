@@ -6,6 +6,12 @@ html, body {
 
 #root {
     height: 100%;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 640px) {
+    #root {
+        overflow:auto;
+    }
 }
