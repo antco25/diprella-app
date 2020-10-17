@@ -1,11 +1,9 @@
 #slider {
     position: absolute;
     background-image: linear-gradient(253deg,#3ba5b4 0,#38ba8a 100%);
-    max-width: 36rem;
     width: 100%;
     height: 100%;
     top: 0;
-    right: 0;
 
     display:flex;
     flex-direction: column;
@@ -60,6 +58,12 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+/************************************
+***********SLIDER ANIMATIONS*********
+*************************************/
+
+
+/*Applied to #slider */
 @keyframes ltr-slider {
     0% {max-width: 36rem;right: calc(100% - 36rem);}
     50%{max-width: 66%;}
@@ -73,12 +77,22 @@
   }
 
 .ltr-slider {
-    animation: ltr-slider 1s forwards ease-out;
+    animation: ltr-slider 1s ease-out;
 }
 
 .rtl-slider {
-    animation: rtl-slider 1s forwards ease-out;
+    animation: rtl-slider 1s ease-out;
 }
+
+.slider-left {
+    max-width: 36rem; left: 0;
+}
+
+.slider-right {
+    max-width: 36rem; right: 0;
+}
+
+/*Applied to #slider-content */
 
 @keyframes rtl-content {
     0% {opacity: 1; left: 0;}
@@ -95,12 +109,14 @@
   }
 
 #slider .rtl-content {
-    animation: rtl-content 1s forwards ease-out;
+    animation: rtl-content 1s ease-out;
 }
 
 #slider .ltr-content {
-    animation: ltr-content 1s forwards ease-out;
+    animation: ltr-content 1s ease-out;
 }
+
+/*Applied to #slider-button-content */
 
 @keyframes rtl-button-content {
     0% {opacity: 1; left: 0;}
@@ -121,34 +137,122 @@
   }
 
 #slider .rtl-button-content {
-    animation: rtl-button-content 1s forwards ease-out;
+    animation: rtl-button-content 1s ease-out;
 }
 
 #slider .ltr-button-content {
-    animation: ltr-button-content 1s forwards ease-out;
+    animation: ltr-button-content 1s ease-out;
 }
 
 /************************************
 ***********MEDIA QUERIES*************
 *************************************/
 
+@media only screen and (max-width: 1700px) {
+
+    .slider-left {
+        max-width: 30rem; left: 0;
+    }
+    
+    .slider-right {
+        max-width: 30rem; right: 0;
+    }
+
+    @keyframes ltr-slider {
+        0% {max-width: 30rem;right: calc(100% - 30rem);}
+        50%{max-width: 66%;}
+        100% { max-width: 30rem; right: 0;}
+      }
+    
+    @keyframes rtl-slider {
+        0% {max-width: 30rem;left: calc(100% - 30rem);}
+        50%{max-width: 66%;}
+        100% { max-width: 30rem; left: 0;}
+      }
+
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .slider-left {
+        max-width: 26rem; left: 0;
+    }
+    
+    .slider-right {
+        max-width: 26rem; right: 0;
+    }
+
+    @keyframes ltr-slider {
+        0% {max-width: 26rem;right: calc(100% - 26rem);}
+        50%{max-width: 66%;}
+        100% { max-width: 26rem; right: 0;}
+      }
+    
+    @keyframes rtl-slider {
+        0% {max-width: 26rem;left: calc(100% - 26rem);}
+        50%{max-width: 66%;}
+        100% { max-width: 26rem; left: 0;}
+      }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .slider-left {
+        max-width: 21rem; left: 0;
+    }
+    
+    .slider-right {
+        max-width: 21rem; right: 0;
+    }
+
+    @keyframes ltr-slider {
+        0% {max-width: 21rem;right: calc(100% - 21rem);}
+        50%{max-width: 66%;}
+        100% { max-width: 21rem; right: 0;}
+      }
+    
+    @keyframes rtl-slider {
+        0% {max-width: 21rem;left: calc(100% - 21rem);}
+        50%{max-width: 66%;}
+        100% { max-width: 21rem; left: 0;}
+      }
+
+}
+
 @media only screen and (max-width: 800px) {
-    #slider {
-        max-width: 17rem;
+
+    .slider-left {
+        max-width: 17rem; left: 0;
+    }
+    
+    .slider-right {
+        max-width: 17rem; right: 0;
     }
 
     @keyframes ltr-slider {
         0% {max-width: 17rem;right: calc(100% - 17rem);}
         50%{max-width: 66%;}
         100% { max-width: 17rem; right: 0;}
-      }
+    }
     
     @keyframes rtl-slider {
         0% {max-width: 17rem;left: calc(100% - 17rem);}
         50%{max-width: 66%;}
         100% { max-width: 17rem; left: 0;}
-      }
+    }
 
+    #slider #slider-content h1 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media only screen and (max-height: 1100px) {
+    #slider {
+        min-height: 480px;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -164,6 +268,9 @@
         animation: unset;
     }
 }
+
+
+
 
 
 

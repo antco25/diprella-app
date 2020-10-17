@@ -2,15 +2,14 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-
-    padding-right: 36rem;
+    min-height: 100%;
 }
 
 #form-content {
     color: #28b498;
     text-align: center;
     width: 25rem;
+    height: 30rem;
 }
 
 #form-content #form-subtitle {
@@ -46,7 +45,34 @@
     background: #007bb5;
     color: white;
   }
+
+#form-content #form-button {
+    background-color: #28b498;
+    border:2px solid #28b498;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    font-family : inherit;
+    font-size: 1rem;
+    border-radius: 5rem;
+    width: 65%;
+    cursor:pointer;
+}
+
+#form-content #form-button #form-button-content {
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: relative;
+}
+
+#form-content #form-button:hover {
+    background-color:#3cc6a5;
+    border:2px solid #3cc6a5;
+}
   
+/*************************************/
+/***********FORM INPUT****************/
 /*************************************/
 
 #form-content #form-input {
@@ -111,32 +137,9 @@
     text-decoration: underline;
 }
 
-/*************************************/
-
-#form-content #form-button {
-    background-color: #28b498;
-    border:2px solid #28b498;
-    padding: 1rem 1rem;
-    text-decoration: none;
-    display: inline-block;
-    font-family : inherit;
-    font-size: 1rem;
-    border-radius: 5rem;
-    width: 65%;
-    cursor:pointer;
-}
-
-#form-content #form-button #form-button-content {
-    color: white;
-    text-transform: uppercase;
-    margin: 0;
-    position: relative;
-}
-
-#form-content #form-button:hover {
-    background-color:#3cc6a5;
-    border:2px solid #3cc6a5;
-}
+/************************************
+***********#FORM ANIMATION***********
+*************************************/
 
 @keyframes ltr-form {
     0% {padding-right: 36rem;}
@@ -151,37 +154,129 @@
   }
 
 .ltr-form {
-    animation: ltr-form 1s forwards ease-out;
+    animation: ltr-form 1s ease-out;
 }
 
 .rtl-form {
-    animation: rtl-form 1s forwards ease-out;
+    animation: rtl-form 1s ease-out;
+}
+
+.form-left {
+    padding-left: 0;
+    padding-right: 36rem;
+}
+
+.form-right {
+    padding-left: 36rem;
+    padding-right: 0;
 }
 
 /************************************
 ***********MEDIA QUERIES*************
 *************************************/
 
-@media only screen and (max-width: 800px) {
-    #slider {
-        max-width: 17rem;
-    }
+@media only screen and (max-width: 1700px) {
 
-    #form {
+    .form-left {
+        padding-left: 0;
+        padding-right: 30rem;
+    }
+    
+    .form-right {
+        padding-left: 30rem;
+        padding-right: 0;
+    }
+    
+    @keyframes ltr-form {
+        0% {padding-right: 30rem;}
+        50%{padding-right: 0; padding-left: 0;}
+        100% {padding-right: 0; padding-left: 30rem;}
+      }
+    
+    @keyframes rtl-form {
+        0% {padding-right: 0; padding-left: 30rem;}
+        50%{padding-left: 0; padding-right: 0;}
+        100% {padding-right: 30rem;}
+      }
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .form-left {
+        padding-left: 0;
+        padding-right: 26rem;
+    }
+    
+    .form-right {
+        padding-left: 26rem;
+        padding-right: 0;
+    }
+    
+    @keyframes ltr-form {
+        0% {padding-right: 26rem;}
+        50%{padding-right: 0; padding-left: 0;}
+        100% {padding-right: 0; padding-left: 26rem;}
+      }
+    
+    @keyframes rtl-form {
+        0% {padding-right: 0; padding-left: 26rem;}
+        50%{padding-left: 0; padding-right: 0;}
+        100% {padding-right: 26rem;}
+      }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .form-left {
+        padding-left: 0;
+        padding-right: 21rem;
+    }
+    
+    .form-right {
+        padding-left: 21rem;
+        padding-right: 0;
+    }
+    
+    @keyframes ltr-form {
+        0% {padding-right: 21rem;}
+        50%{padding-right: 0; padding-left: 0;}
+        100% {padding-right: 0; padding-left: 21rem;}
+      }
+    
+    @keyframes rtl-form {
+        0% {padding-right: 0; padding-left: 21rem;}
+        50%{padding-left: 0; padding-right: 0;}
+        100% {padding-right: 21rem;}
+      }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .form-left {
+        padding-left: 0;
         padding-right: 17rem;
+    }
+    
+    .form-right {
+        padding-left: 17rem;
+        padding-right: 0;
     }
 
     @keyframes ltr-form {
         0% {padding-right: 17rem;}
         50%{padding-right: 0; padding-left: 0;}
         100% {padding-right: 0; padding-left: 17rem;}
-      }
+    }
     
     @keyframes rtl-form {
         0% {padding-right: 0; padding-left: 17rem;}
         50%{padding-left: 0; padding-right: 0;}
         100% {padding-right: 17rem;}
-      }
+    }
+
+    #form-content {
+        width: 19rem;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -192,8 +287,6 @@
     }
 
     #form-content {
-        color: #28b498;
-        text-align: center;
         width: 19rem;
     }
 

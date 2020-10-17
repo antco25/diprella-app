@@ -10,8 +10,15 @@ html, body {
     overflow: hidden;
 }
 
+@media only screen and (max-height: 1100px) {
+    #root {
+        overflow-y: auto;
+    }
+}
+
 @media only screen and (max-width: 640px) {
     #root {
+        overflow-y: unset;
         overflow:auto;
     }
 }
